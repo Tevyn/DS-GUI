@@ -28,6 +28,12 @@ body{
     grid-gap: 1em;
 }
 
+aside{
+    border-left: .0625em solid var(--border-color);
+    padding-left: 1em;
+    height: 100vh;
+}
+
 input, label{
     margin: .25rem 0;
 }
@@ -106,4 +112,9 @@ input[type=number]{
     border: .0625em solid var(--border-color);
     border-radius: var(--radius);
     padding: .25em;        
+}
+
+aside > input, aside > label, aside > select{
+    font-size: 18px;
+    margin-bottom: 9px;
 }
