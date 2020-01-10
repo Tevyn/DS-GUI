@@ -1,0 +1,66 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>DS GUI</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+    <label for="bkg">Background color:</label>
+    <input type="color" id="bkg" value="#ffffff">
+
+    <br>
+
+    <label for="text">Text color:</label>
+    <input type="color" id="text" value="#000000">
+
+    <br>
+
+    <label for="primary">Primary color:</label>
+    <input type="color" id="primary" value="#27ae60">
+
+    <br>
+
+    <label for="font">Font:</label>
+    <select id="font">
+        <option value="Times New Roman">Times New Roman</option>
+        <option value="Georgia">Georgia</option>
+        <option value="Arial">Arial</option>
+        <option value="Verdana">Verdana</option>
+    </select>
+
+    <br>
+
+    <label for="rem">Base text size:</label>
+    <input type="number" id="rem" min="12" max="24" value="16">
+
+    <br>
+
+    <label for="scale">Text scale:</label>
+    <input type="range" id="scale" min="1.125" max="1.5" step=".01">
+
+    <h1>Heading the First</h1>
+    <h2>Heading the Second</h2>
+    <h3>Heading the Third</h3>
+    <h4>Heading the Fourth</h4>
+    <h5>Heading the Fifth</h5>
+    <h6>Heading the Sixth</h6>
+    <p>The mailman walked towards my office door, half an hour earlier than usual. He didn’t sound right. His footsteps fell more heavily, jauntily, and he whistled. A new guy. He whistled his way to my office door and then fell silent for a moment. Then he laughed.</p>
+
+    <label for="radius">Corner radius:</label>
+    <input type="range" id="radius" min="0" max="1" step=".01">
+
+    <br>
+    
+    <button class="primary">Primary CTA</button>
+    <button class="secondary">Secondary CTA</button>
+
+
+    <script src="scripts.js"></script>
+</body>
+</html>
