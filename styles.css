@@ -2,6 +2,7 @@
     --background: #ffffff;
     --text: #000000;
     --primary: #1b5c36;
+    --border-color: #888888;
     --font: Verdana;
     --rem: 16px;
     --h1: 3.0rem;
@@ -19,6 +20,12 @@ html {
     font-family: var(--font);
     color: var(--text);
     font-size: var(--rem);
+}
+
+body{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 1em;
 }
 
 input, label{
@@ -86,7 +93,17 @@ select{
     font-size: 1rem;
     color: var(--text);
     background-color: var(--background);
-    border: .0625em solid #888888;
+    border: .0625em solid var(--border-color);
     border-radius: var(--radius);
     padding: .5em;
+}
+
+input[type=number]{
+    font-size: var(--rem);
+    font: var(--font);
+    color: var(--text);
+    background-color: var(--background);
+    border: .0625em solid var(--border-color);
+    border-radius: var(--radius);
+    padding: .25em;        
 }

@@ -25,6 +25,14 @@ primaryInput.addEventListener('change', e => {
     document.documentElement.style.setProperty(primaryVariable, e.target.value);
 })
 
+//Primary Color
+const borderColorInput = document.getElementById('border-color')
+const borderColorVariable = '--border-color'
+
+borderColorInput.addEventListener('change', e => {
+    document.documentElement.style.setProperty(borderColorVariable, e.target.value);
+})
+
 
 //Font
 const fontInput = document.getElementById('font')
