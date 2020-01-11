@@ -3,7 +3,8 @@
     --text: #000000;
     --primary: #1b5c36;
     --border-color: #888888;
-    --font: Verdana;
+    --header-font: Georgia;
+    --body-font: Verdana;
     --rem: 16px;
     --h1: 3.0rem;
     --h2: 2.5rem;
@@ -17,55 +18,50 @@
 
 html {
     background-color: var(--background);
-    font-family: var(--font);
+    font-family: var(--body-font);
     color: var(--text);
     font-size: var(--rem);
 }
 
 body{
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 1fr 400px;
     grid-gap: 1em;
 }
 
-aside{
-    border-left: .0625em solid var(--border-color);
-    padding-left: 1em;
-    height: 100vh;
+input, label{
+    font-family: var(--body-font);
+    margin: .25em 0;
 }
 
-input, label{
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--header-font);
+    padding: .25rem 0;
     margin: .25rem 0;
 }
 
 h1{
     font-size: var(--h1);
-    line-height: .5em;
 }
 
 h2{
     font-size: var(--h2);
-    line-height: .5em;
 }
 
 h3{
     font-size: var(--h3);
-    line-height: .5em;
 }
 
 h4{
     font-size: var(--h4);
-    line-height: .5em;
 }
 
 h5{
     font-size: var(--h5);
-    line-height: .5em;
 }
 
 h6{
     font-size: var(--h6);
-    line-height: .5em;
 }
 
 p{
@@ -105,7 +101,7 @@ select{
 }
 
 input[type=number]{
-    font-size: var(--rem);
+    font-size: 1rem;
     font: var(--font);
     color: var(--text);
     background-color: var(--background);
@@ -114,7 +110,20 @@ input[type=number]{
     padding: .25em;        
 }
 
-aside > input, aside > label, aside > select{
+
+aside{
     font-size: 18px;
-    margin-bottom: 9px;
+    border-left: .0625em solid var(--border-color);
+    padding-left: 1em;
+    height: 100vh;
+    display:grid;
+    grid-template-columns: 50% 40%;
+    grid-gap: 1em 0;
+    grid-template-rows: repeat(10, 2em);
+}
+
+aside > input, aside > label, aside > select{
+    font-size: 1em;
+    padding: initial;
+    width: auto;
 }
