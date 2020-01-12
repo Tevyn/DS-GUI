@@ -68,7 +68,7 @@ p{
     max-width: 50em;
 }
 
-.primary{
+button.primary{
     font-family: var(--font);
     font-size: 1rem;
     font-weight: 600;
@@ -79,7 +79,7 @@ p{
     padding: .5em 1em;
 }
 
-.secondary{
+button.secondary{
     font-family: var(--font);
     font-size: 1rem;
     font-weight: 600;
@@ -100,15 +100,21 @@ select{
     padding: .5em;
 }
 
-input[type=number]{
+input{
     font-size: 1rem;
     font: var(--font);
     color: var(--text);
     background-color: var(--background);
-    border: .0625em solid var(--border-color);
+    border: .125em solid var(--border-color);
     border-radius: var(--radius);
     padding: .25em;        
 }
+
+input:focus{
+    border-color: var(--primary);
+    box-shadow: 0 0 .5em 0 var(--primary);
+}
+
 
 
 aside{
@@ -126,4 +132,9 @@ aside > input, aside > label, aside > select{
     font-size: 1em;
     padding: initial;
     width: auto;
+}
+
+aside > input[type=range]:focus{
+    border-color: initial;
+    box-shadow: none;
 }
