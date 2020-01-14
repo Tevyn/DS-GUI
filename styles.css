@@ -14,6 +14,7 @@
     --h6: 1rem;
     --p: 1rem;
     --radius: .25em;
+    --full-width: 1 / 13
 }
 
 html {
@@ -29,15 +30,28 @@ body{
     grid-gap: 1em;
 }
 
-input, label{
+article{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 1rem;
+}
+
+
+
+.row{
+    grid-column: var(--full-width);
+    position: relative;
+}
+
+input, label, p{
     font-family: var(--body-font);
-    margin: .25em 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--header-font);
     padding: .25rem 0;
     margin: .25rem 0;
+    grid-column: var(--full-width);
 }
 
 h1{
@@ -65,29 +79,30 @@ h6{
 }
 
 p{
+    grid-column: var(--full-width);
     max-width: 50em;
 }
 
-button.primary{
-    font-family: var(--font);
+button{
+    font-family: var(--body-font);
     font-size: 1rem;
     font-weight: 600;
+    padding: .5em 1em;
+    min-height: 2em;
+}
+
+button.primary{
     color: var(--background);
     background: var(--primary);
     border: none;
     border-radius: var(--radius);
-    padding: .5em 1em;
 }
 
 button.secondary{
-    font-family: var(--font);
-    font-size: 1rem;
-    font-weight: 600;
     color: var(--primary);
     background-color: var(--background);
     border: .125em solid var(--primary);
     border-radius: var(--radius);
-    padding: .5em 1em;
 }
 
 select{
@@ -98,43 +113,46 @@ select{
     border: .0625em solid var(--border-color);
     border-radius: var(--radius);
     padding: .5em;
+    min-width: 100%;
 }
 
-input{
+.input-field{
+    position: relative;
+}
+
+.input-field > input{
     font-size: 1rem;
     font: var(--font);
     color: var(--text);
     background-color: var(--background);
     border: .125em solid var(--border-color);
     border-radius: var(--radius);
-    padding: .25em;        
+    padding: .5em;     
+    min-width: 100%;   
 }
 
 input:focus{
     border-color: var(--primary);
-    box-shadow: 0 0 .5em 0 var(--primary);
+    box-shadow: 0 0 .25em 0 var(--primary);
 }
-
-
 
 aside{
     font-size: 18px;
     border-left: .0625em solid var(--border-color);
     padding-left: 1em;
     height: 100vh;
-    display:grid;
-    grid-template-columns: 50% 40%;
-    grid-gap: 1em 0;
-    grid-template-rows: repeat(10, 2em);
+    display: grid;
+    grid-template-rows: auto;
+    grid-gap-rows: .5rem;
 }
 
-aside > input, aside > label, aside > select{
+aside > .input-field > input, aside > .input-field >label, aside > .input-field >select{
     font-size: 1em;
-    padding: initial;
+    padding: unset;
     width: auto;
 }
 
-aside > input[type=range]:focus{
+input[type=range]:focus{
     border-color: initial;
     box-shadow: none;
 }
