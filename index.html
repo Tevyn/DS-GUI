@@ -5,7 +5,9 @@
     <meta charset="utf-8">
     <title>DS GUI</title>
 
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="styles.css">
+
 
 </head>
 
@@ -32,73 +34,79 @@
     </article>
 
     <aside>
+        
+        <details>
+            <summary>Colors</summary>
+            <div class="input-field">
+                <label for="primary">Primary color:</label>
+                <input type="color" id="primary" value="#27ae60">
+            </div>
+            
+            <div class="input-field">
+                <label for="bkg">Background color:</label>
+                <input type="color" id="bkg" value="#ffffff">
+            </div>
+                
+            <div class="input-field">
+                <label for="text">Text color:</label>
+                <input type="color" id="text" value="#000000">
+            </div>
+                
+            <div class="input-field">
+                <label for="border-color">Border color:</label>
+                <input type="color" id="border-color" value="#888888">
+            </div>
+        </details>
+        
+        <details>
+            <summary>Text</summary>
+            <div class="input-field">
+                <label for="header-font">Header font:</label>
+                <select class="control" id="header-font">
+                    <optgroup label="Serif"></optgroup>
+                        <option value="Times New Roman">Times New Roman</option>
+                        <option value="Georgia" selected="selected">Georgia</option>
+                    <optgroup label="Sans-serif"></optgroup>
+                        <option value="Arial">Arial</option>
+                        <option value="Verdana">Verdana</option>
+                        <option value="Roboto">Roboto</option>
+                        <option value="Candara">Candara</option>
+                        <option value="Arial Black">Arial Black</option>
+                        <option value="Impact">Impact</option>
+                </select>
+            </div>
 
-        <div class="input-field">
-            <label for="primary">Primary color:</label>
-            <input type="color" id="primary" value="#27ae60">
-        </div>
-        
-        <div class="input-field">
-            <label for="bkg">Background color:</label>
-            <input type="color" id="bkg" value="#ffffff">
-        </div>
+            <div class="input-field">
+                <label for="body-font">Body font:</label>
+                <select class="control" id="body-font">
+                    <optgroup label="Serif"></optgroup>
+                        <option value="Times New Roman">Times New Roman</option>
+                        <option value="Georgia">Georgia</option>
+                    <optgroup label="Sans-serif"></optgroup>
+                        <option value="Arial">Arial</option>
+                        <option value="Verdana" selected="selected">Verdana</option>
+                        <option value="Roboto">Roboto</option>
+                        <option value="Candara">Candara</option>
+                        <option value="Arial Black">Arial Black</option>
+                        <option value="Impact">Impact</option>
+                </select class="control">
+            </div>
             
-        <div class="input-field">
-            <label for="text">Text color:</label>
-            <input type="color" id="text" value="#000000">
-        </div>
+            <div class="input-field">
+                <label for="rem">Base text size:</label>
+                <input type="number" class="control" id="rem" min="12" max="24" value="16">
+            </div>
             
-        <div class="input-field">
-            <label for="border-color">Border color:</label>
-            <input type="color" id="border-color" value="#888888">
-        </div>
-        
-        <div class="input-field">
-            <label for="header-font">Header font:</label>
-            <select id="header-font">
-                <optgroup label="Serif"></optgroup>
-                    <option value="Times New Roman">Times New Roman</option>
-                    <option value="Georgia" selected="selected">Georgia</option>
-                <optgroup label="Sans-serif"></optgroup>
-                    <option value="Arial">Arial</option>
-                    <option value="Verdana">Verdana</option>
-                    <option value="Roboto">Roboto</option>
-                    <option value="Candara">Candara</option>
-                    <option value="Arial Black">Arial Black</option>
-                    <option value="Impact">Impact</option>
-            </select>
-        </div>
-
-        <div class="input-field">
-            <label for="body-font">Body font:</label>
-            <select id="body-font">
-                <optgroup label="Serif"></optgroup>
-                    <option value="Times New Roman">Times New Roman</option>
-                    <option value="Georgia">Georgia</option>
-                <optgroup label="Sans-serif"></optgroup>
-                    <option value="Arial">Arial</option>
-                    <option value="Verdana" selected="selected">Verdana</option>
-                    <option value="Roboto">Roboto</option>
-                    <option value="Candara">Candara</option>
-                    <option value="Arial Black">Arial Black</option>
-                    <option value="Impact">Impact</option>
-            </select>
-        </div>
-        
-        <div class="input-field">
-            <label for="rem">Base text size:</label>
-            <input type="number" id="rem" min="12" max="24" value="16">
-        </div>
-        
-        <div class="input-field">
-            <label for="scale">Text scale:</label>
-            <input type="range" id="scale" min="1.125" max="1.5" step=".01">
-        </div>
-            
-        <div class="input-field">
-            <label for="radius">Corner radius:</label>
-            <input type="range" id="radius" min="0" max="1" step=".01">
-        </div>
+            <div class="input-field">
+                <label for="scale">Text scale:</label>
+                <input type="range" id="scale" min="1.125" max="1.5" step=".01">
+            </div>
+        </details>
+                
+            <div class="input-field">
+                <label for="radius">Corner radius:</label>
+                <input type="range" id="radius" min="0" max="1" step=".01">
+            </div>
 
     </aside>
 

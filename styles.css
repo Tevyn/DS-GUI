@@ -14,7 +14,8 @@
     --h6: 1rem;
     --p: 1rem;
     --radius: .25em;
-    --full-width: 1 / 13
+    --full-width: 1 / 13;
+    --controls: #f8f8f8;
 }
 
 html {
@@ -34,6 +35,7 @@ article{
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-gap: 1rem;
+    padding: 1rem;
 }
 
 
@@ -138,21 +140,38 @@ input:focus{
 
 aside{
     font-size: 18px;
+    font-family: roboto;
     border-left: .0625em solid var(--border-color);
-    padding-left: 1em;
+    padding: 1em;
     height: 100vh;
-    display: grid;
-    grid-template-rows: auto;
-    grid-gap-rows: .5rem;
+    background-color: #444444;
 }
 
-aside > .input-field > input, aside > .input-field >label, aside > .input-field >select{
-    font-size: 1em;
+aside > details {
+    padding-bottom: 1em;
+    border-bottom: .0625em solid var(--controls);
+    margin-bottom: 1em;
+    color: var(--controls);
+}
+
+aside .input-field > input, aside > .input-field > label, aside > .input-field >select {
+    font-size: 1em !important;
     padding: unset;
     width: auto;
+    color: var(--controls);
+    border-color: var(--controls);
 }
 
-input[type=range]:focus{
-    border-color: initial;
-    box-shadow: none;
+aside > details .input-field {
+    margin-top: 1em;
+}
+
+aside .input-field > input[type=number]{
+    color: var(--text);
+    padding: .5em 0 .5em .5em;
+    width: 100%;
+}
+
+.control{
+    font-size: 18px;
 }
