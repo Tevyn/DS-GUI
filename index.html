@@ -36,7 +36,7 @@
     <aside>
         
         <details>
-            <summary>Colors</summary>
+            <summary>Brand Basics</summary>
             <div class="input-field">
                 <label for="primary">Primary color:</label>
                 <input type="color" id="primary" value="#27ae60">
@@ -46,20 +46,21 @@
                 <label for="bkg">Background color:</label>
                 <input type="color" id="bkg" value="#ffffff">
             </div>
-                
-            <div class="input-field">
-                <label for="text">Text color:</label>
-                <input type="color" id="text" value="#000000">
-            </div>
-                
-            <div class="input-field">
-                <label for="border-color">Border color:</label>
-                <input type="color" id="border-color" value="#888888">
-            </div>
         </details>
         
         <details>
-            <summary>Text</summary>
+            <summary>Body Text</summary>
+
+            <div class="input-field">
+                <label for="rem">Base text size:</label>
+                <input type="number" class="control" id="rem" min="12" max="24" value="16">
+            </div>
+
+            <div class="input-field">
+                <label for="text">Body text color:</label>
+                <input type="color" id="text" value="#000000">
+            </div>
+            
             <div class="input-field">
                 <label for="header-font">Header font:</label>
                 <select class="control" id="header-font">
@@ -75,7 +76,10 @@
                         <option value="Impact">Impact</option>
                 </select>
             </div>
+        </details>
 
+        <details>
+            <summary>Header Text</summary>
             <div class="input-field">
                 <label for="body-font">Body font:</label>
                 <select class="control" id="body-font">
@@ -92,22 +96,26 @@
                 </select class="control">
             </div>
             
-            <div class="input-field">
-                <label for="rem">Base text size:</label>
-                <input type="number" class="control" id="rem" min="12" max="24" value="16">
-            </div>
-            
+           
             <div class="input-field">
                 <label for="scale">Text scale:</label>
                 <input type="range" id="scale" min="1.125" max="1.5" step=".01">
             </div>
         </details>
                 
+        <details>
+            <summary>Buttons and Inputs</summary>
+
+            <div class="input-field">
+                <label for="border-color">Border color:</label>
+                <input type="color" id="border-color" value="#888888">
+            </div>
+            
             <div class="input-field">
                 <label for="radius">Corner radius:</label>
                 <input type="range" id="radius" min="0" max="1" step=".01">
             </div>
-
+        </details>
     </aside>
 
     <script src="scripts.js"></script>
