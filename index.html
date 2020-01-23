@@ -52,6 +52,22 @@
             <summary>Body Text</summary>
 
             <div class="input-field">
+                <label for="body-font">Body font:</label>
+                <select class="control" id="body-font">
+                    <optgroup label="Serif"></optgroup>
+                        <option value="Times New Roman">Times New Roman</option>
+                        <option value="Georgia">Georgia</option>
+                    <optgroup label="Sans-serif"></optgroup>
+                        <option value="Arial">Arial</option>
+                        <option value="Verdana" selected="selected">Verdana</option>
+                        <option value="Roboto">Roboto</option>
+                        <option value="Candara">Candara</option>
+                        <option value="Arial Black">Arial Black</option>
+                        <option value="Impact">Impact</option>
+                </select class="control">
+            </div>
+
+            <div class="input-field">
                 <label for="rem">Base text size:</label>
                 <input type="number" class="control" id="rem" min="12" max="24" value="16">
             </div>
@@ -61,6 +77,12 @@
                 <input type="color" id="text" value="#000000">
             </div>
             
+
+        </details>
+
+        <details>
+            <summary>Header Text</summary>
+
             <div class="input-field">
                 <label for="header-font">Header font:</label>
                 <select class="control" id="header-font">
@@ -76,27 +98,7 @@
                         <option value="Impact">Impact</option>
                 </select>
             </div>
-        </details>
-
-        <details>
-            <summary>Header Text</summary>
-            <div class="input-field">
-                <label for="body-font">Body font:</label>
-                <select class="control" id="body-font">
-                    <optgroup label="Serif"></optgroup>
-                        <option value="Times New Roman">Times New Roman</option>
-                        <option value="Georgia">Georgia</option>
-                    <optgroup label="Sans-serif"></optgroup>
-                        <option value="Arial">Arial</option>
-                        <option value="Verdana" selected="selected">Verdana</option>
-                        <option value="Roboto">Roboto</option>
-                        <option value="Candara">Candara</option>
-                        <option value="Arial Black">Arial Black</option>
-                        <option value="Impact">Impact</option>
-                </select class="control">
-            </div>
-            
-           
+                   
             <div class="input-field">
                 <label for="scale">Text scale:</label>
                 <input type="range" id="scale" min="1.125" max="1.5" step=".01">
