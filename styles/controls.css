@@ -2,7 +2,7 @@
     --controls: #f8f8f8;
 }
 
-aside{
+#control-panel{
     font-size: 18px;
     font-family: roboto;
     border-left: .0625em solid var(--border-color);
@@ -11,26 +11,26 @@ aside{
     background-color: #444444;
 }
 
-aside > details {
+#control-panel > details {
     padding-bottom: 1em;
     border-bottom: .0625em solid var(--controls);
     margin-bottom: 1em;
     color: var(--controls);
 }
 
-aside .input-field > input, aside > .input-field > label, aside > .input-field >select {
-    font-size: 1em !important;
+#control-panel .input-field > input, #control-panel > .input-field > label, #control-panel > .input-field >select {
+    font-size: 1em ;
     padding: unset;
     width: auto;
     color: var(--controls);
     border-color: var(--controls);
 }
 
-aside > details .input-field {
+#control-panel > details .input-field {
     margin-top: 1em;
 }
 
-aside .input-field > input[type=number]{
+#control-panel .input-field > input[type=number]{
     color: var(--text);
     padding: .5em 0 .5em .5em;
     width: 100%;
