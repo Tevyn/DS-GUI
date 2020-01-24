@@ -1,9 +1,9 @@
 //Linking an input's elementId to a css variable
-
 function linkInput(elementId, cssVar){
   linkInputHelper(elementId, cssVar, 'e.target.value')
 }
 
+//A helper that accepts an arbitrary value as a string to allow for calculations and units
 function linkInputHelper(elementId, cssVar, cssFunction) {
   const input = document.getElementById(elementId);
 
@@ -23,30 +23,12 @@ linkInput('body-weight','--body-weight');
 
 //Header text
 linkInput('header-font','--header-font');
-
-//Font Scale is a bit more complicated, but there's probably a way to make it better.
-const scaleInput = document.getElementById('scale')
-const h1Variable = '--h1'
-const h2Variable = '--h2'
-const h3Variable = '--h3'
-const h4Variable = '--h4'
-const h5Variable = '--h5'
-
-scaleInput.addEventListener('input', e => {
-    document.documentElement.style.setProperty(h1Variable, Math.pow(e.target.value, 5) + 'rem');
-    document.documentElement.style.setProperty(h2Variable, Math.pow(e.target.value, 4) + 'rem');
-    document.documentElement.style.setProperty(h3Variable, Math.pow(e.target.value, 3) + 'rem');
-    document.documentElement.style.setProperty(h4Variable, Math.pow(e.target.value, 2) + 'rem');
-    document.documentElement.style.setProperty(h5Variable, Math.pow(e.target.value, 1) + 'rem');
-})
+linkInputHelper('scale','--h1',`Math.pow(e.target.value, 5) + 'rem'`);
+linkInputHelper('scale','--h2',`Math.pow(e.target.value, 4) + 'rem'`);
+linkInputHelper('scale','--h3',`Math.pow(e.target.value, 3) + 'rem'`);
+linkInputHelper('scale','--h4',`Math.pow(e.target.value, 2) + 'rem'`);
+linkInputHelper('scale','--h5',`e.target.value + 'rem'`);
 
 //Buttons and inputs
 linkInput('border-color','--border-color');
-
-//Corner Radius is also slightly more involved; TODO abstract 
-const radiusInput = document.getElementById('radius')
-const radiusVariable = '--radius'
-
-radiusInput.addEventListener('input', e => {
-    document.documentElement.style.setProperty(radiusVariable, e.target.value + 'rem');
-})
+linkInputHelper('radius','--radius',`e.target.value + 'rem'`);
