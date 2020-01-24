@@ -8,8 +8,9 @@
     
     /* Body text, background */
     --background: #ffffff;
-    --text: #000000;
+    --body-color: #000000;
     --body-font: Verdana;
+    --body-weight: 400;
     --rem: 16px;
     --p: 1rem;
 
@@ -55,8 +56,9 @@ article{
 html {
     background-color: var(--background);
     font-family: var(--body-font);
-    color: var(--text);
+    color: var(--body-color);
     font-size: var(--rem);
+    font-weight: var(--body-weight);
 }
 
 input, label, p{
@@ -137,7 +139,7 @@ button.secondary{
 .input-field > input{
     font-size: 1rem;
     font: var(--font);
-    color: var(--text);
+    color: var(--body-color);
     background-color: var(--background);
     border: .125em solid var(--border-color);
     border-radius: var(--radius);

@@ -1,65 +1,25 @@
+//Linking an input's elementId to a css variable
+function linkInput(elementId, cssVar) {
+  const input = document.getElementById(elementId);
 
-//Background Color
-const colorInput = document.getElementById('bkg')
-const colorVariable = '--background'
+  input.addEventListener('input', e => {
+    document.documentElement.style.setProperty(cssVar, e.target.value);
+})}
 
-colorInput.addEventListener('input', e => {
-    document.documentElement.style.setProperty(colorVariable, e.target.value);
-  })
+//Brand basics
+linkInput('primary', '--primary');
+linkInput('bkg', '--background');
 
+//Body text
+linkInput('body-font','--body-font');
+linkInput('rem','--rem');
+linkInput('body-color','--body-color');
+linkInput('body-weight','--body-weight');
 
-//Font Color
-const textcolorInput = document.getElementById('text')
-const textcolorVariable = '--text'
+//Header text
+linkInput('header-font','--header-font');
 
-textcolorInput.addEventListener('input', e => {
-    document.documentElement.style.setProperty(textcolorVariable, e.target.value);
-  })
-
-
-//Primary Color
-const primaryInput = document.getElementById('primary')
-const primaryVariable = '--primary'
-
-primaryInput.addEventListener('input', e => {
-    document.documentElement.style.setProperty(primaryVariable, e.target.value);
-})
-
-//Broder Color
-const borderColorInput = document.getElementById('border-color')
-const borderColorVariable = '--border-color'
-
-borderColorInput.addEventListener('input', e => {
-    document.documentElement.style.setProperty(borderColorVariable, e.target.value);
-})
-
-
-//Header Font
-const headerFontInput = document.getElementById('header-font')
-const headerFontVariable = '--header-font'
-
-headerFontInput.addEventListener('input', e => {
-    document.documentElement.style.setProperty(headerFontVariable, e.target.value);
-  })
-
-//Body Font
-const bodyFontInput = document.getElementById('body-font')
-const bodyFontVariable = '--body-font'
-
-bodyFontInput.addEventListener('input', e => {
-    document.documentElement.style.setProperty(bodyFontVariable, e.target.value);
-  })
-
-
-//Rem
-const remInput = document.getElementById('rem')
-const remVariable = '--rem'
-
-remInput.addEventListener('input', e => {
-    document.documentElement.style.setProperty(remVariable, e.target.value + 'px');
-  })
-
-//Font Scale
+//Font Scale is a bit more complicated, but there's probably a way to make it better.
 const scaleInput = document.getElementById('scale')
 const h1Variable = '--h1'
 const h2Variable = '--h2'
@@ -75,7 +35,10 @@ scaleInput.addEventListener('input', e => {
     document.documentElement.style.setProperty(h5Variable, Math.pow(e.target.value, 1) + 'rem');
 })
 
-//Corner Radius
+//Buttons and inputs
+linkInput('border-color','--border-color');
+
+//Corner Radius is also slightly more involved; TODO abstract 
 const radiusInput = document.getElementById('radius')
 const radiusVariable = '--radius'
 

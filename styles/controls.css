@@ -1,5 +1,6 @@
 :root{
-    --controls: #f8f8f8;
+    --controls: #fefefe;
+    --controls-dark: #222222;
 }
 
 #control-panel{
@@ -8,7 +9,7 @@
     border-left: .0625em solid var(--border-color);
     padding: 1em;
     height: 100vh;
-    background-color: #444444;
+    background-color: var(--controls-dark);
 }
 
 #control-panel > details {
@@ -31,11 +32,11 @@
 }
 
 #control-panel .input-field > input[type=number]{
-    color: var(--text);
+    color: var(--controls-dark);
     padding: .5em 0 .5em .5em;
-    width: 100%;
 }
 
 .control{
     font-size: 18px;
+    color: var(--controls-dark);
 }
