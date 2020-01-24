@@ -1,9 +1,14 @@
 //Linking an input's elementId to a css variable
-function linkInput(elementId, cssVar) {
+
+function linkInput(elementId, cssVar){
+  linkInputHelper(elementId, cssVar, 'e.target.value')
+}
+
+function linkInputHelper(elementId, cssVar, cssFunction) {
   const input = document.getElementById(elementId);
 
   input.addEventListener('input', e => {
-    document.documentElement.style.setProperty(cssVar, e.target.value);
+    document.documentElement.style.setProperty(cssVar, eval(cssFunction));
 })}
 
 //Brand basics
